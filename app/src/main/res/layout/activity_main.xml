@@ -11,22 +11,67 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="0"
-        android:textSize="130dp"
+        android:textSize="150dp"
         android:textColor="#000"
         android:textAlignment="textEnd"
         android:paddingBottom="1dp"
         />
 
-    <TextView
+
+    <Button
+        android:id="@+id/btn_igual"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="+"
+        android:text="="
         android:textSize="100dp"
-        android:textColor="#000"
-        android:layout_gravity="bottom"
-
+        android:textColor="#FFFFFF"
+        android:layout_gravity="bottom|right"
+        android:background="#000"
         />
 
+    <Button
+        android:id="@+id/btn_cero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFF7F7"
+        android:text="0"
+        android:textColor="#000000"
+        android:textSize="100dp"
+        android:layout_gravity="bottom|center"
+        />
 
+    <Button
+        android:id="@+id/btn_uno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFF7F7"
+        android:text="1"
+        android:textColor="#000000"
+        android:textSize="100dp"
+        android:layout_gravity="center_vertical"
+        />
+
+    <Button
+        android:id="@+id/btn_dos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#FFF7F7"
+        android:text="2"
+        android:textColor="#000000"
+        android:textSize="100dp"
+        />
+
+    <Button
+        android:id="@+id/btn_tres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|right"
+        android:background="#FFF7F7"
+        android:text="3"
+        android:textColor="#000000"
+        android:textSize="100dp"
+        />
 
 </FrameLayout>
+
