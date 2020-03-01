@@ -4,14 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    >
 
-            <TextView
+        <TextView
             android:id="@+id/text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="0"
-            android:textSize="150sp"
+            android:textSize="105sp"
             android:textColor="#000"
             android:textAlignment="textEnd"
             />
@@ -52,8 +53,6 @@
             android:layout_toRightOf="@+id/btn_ocho"
 
             />
-
-
 
         <Button
             android:id="@+id/btn_cuatro"
@@ -125,7 +124,6 @@
         android:layout_toRightOf="@+id/btn_dos"
         />
 
-
         <Button
             android:id="@+id/btn_cero"
             android:layout_width="wrap_content"
@@ -156,10 +154,58 @@
             android:text="="
             android:textSize="100sp"
             android:textColor="#FFFFFF"
-            android:background="#000"
+            android:background="#D15013"
             android:layout_below="@id/btn_tres"
             android:layout_toRightOf="@+id/btn_punto"
             />
+    <Button
+        android:id="@+id/btn_mas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:textSize="100sp"
+        android:textColor="#FFFFFF"
+        android:background="#000"
+        android:layout_below="@id/text_view"
+        android:layout_toRightOf="@+id/btn_nueve"
+        />
+
+    <Button
+        android:id="@+id/btn_menos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:textSize="100sp"
+        android:textColor="#FFFFFF"
+        android:background="#000"
+        android:layout_below="@id/btn_mas"
+        android:layout_toRightOf="@+id/btn_seis"
+        />
+
+    <Button
+        android:id="@+id/btn_por"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*"
+        android:textSize="100sp"
+        android:textColor="#FFFFFF"
+        android:background="#000"
+        android:layout_below="@id/btn_menos"
+        android:layout_toRightOf="@+id/btn_tres"
+        />
+
+    <Button
+        android:id="@+id/btn_dividir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/"
+        android:textSize="100sp"
+        android:textColor="#FFFFFF"
+        android:background="#000"
+        android:layout_below="@id/btn_por"
+        android:layout_toRightOf="@+id/btn_igual"
+        />
 
 
-   </RelativeLayout>
+
+</RelativeLayout>
