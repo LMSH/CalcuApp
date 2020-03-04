@@ -7,26 +7,46 @@
     android:orientation="vertical"
     >
 
-        <TextView
-            android:id="@+id/text_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="0"
-            android:textSize="105sp"
-            android:textColor="#000"
-            android:textAlignment="textEnd"
-            />
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="160dp"
+        android:scrollHorizontally="true"
+        android:text=""
+        android:textAlignment="textEnd"
+        android:textColor="#CA0606"
+        android:textSize="130sp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="40dp"
 
-        <Button
+
+        />
+
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFF7F7"
+        android:text="C"
+        android:textColor="#000000"
+        android:textSize="70sp"
+        android:layout_below="@id/text_view"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight= "35dp"
+        android:layout_marginBottom="1dp"
+        />
+
+    <Button
             android:id="@+id/btn_siete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#FFF7F7"
             android:text="7"
             android:textColor="#000000"
-            android:textSize="100sp"
-            android:layout_below="@id/text_view"
-            />
+            android:textSize="70sp"
+            android:layout_below="@id/clear"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight= "3dp"  />
 
         <Button
             android:id="@+id/btn_ocho"
@@ -35,9 +55,9 @@
             android:background="#FFF7F7"
             android:text="8"
             android:textColor="#000000"
-            android:textSize="100sp"
+            android:textSize="70sp"
             android:layout_toRightOf="@+id/btn_siete"
-            android:layout_below="@id/text_view"
+            android:layout_below="@id/clear"
 
             />
 
@@ -48,8 +68,8 @@
             android:background="#FFF7F7"
             android:text="9"
             android:textColor="#000000"
-            android:textSize="100sp"
-            android:layout_below="@id/text_view"
+            android:textSize="70sp"
+            android:layout_below="@id/clear"
             android:layout_toRightOf="@+id/btn_ocho"
 
             />
@@ -61,18 +81,18 @@
             android:background="#FFF7F7"
             android:text="4"
             android:textColor="#000000"
-            android:textSize="100sp"
+            android:textSize="70sp"
             android:layout_below="@id/btn_siete"
-            />
+            android:layout_marginLeft="25dp"   android:layout_marginRight="3dp"         />
 
-        <Button
+       <Button
             android:id="@+id/btn_cinco"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#FFF7F7"
             android:text="5"
             android:textColor="#000000"
-            android:textSize="100sp"
+            android:textSize="70sp"
             android:layout_below="@id/btn_ocho"
             android:layout_toRightOf="@+id/btn_cuatro"
             />
@@ -84,7 +104,7 @@
             android:background="#FFF7F7"
             android:text="6"
             android:textColor="#000000"
-            android:textSize="100sp"
+            android:textSize="70sp"
             android:layout_below="@id/btn_nueve"
             android:layout_toRightOf="@+id/btn_cinco"
             />
@@ -96,9 +116,9 @@
         android:background="#FFF7F7"
         android:text="1"
         android:textColor="#000000"
-        android:textSize="100sp"
-            android:layout_below="@id/btn_cuatro"
-        />
+        android:textSize="70sp"
+        android:layout_below="@id/btn_cuatro"
+        android:layout_marginLeft="25dp"    android:layout_marginRight="3dp"    />
 
     <Button
         android:id="@+id/btn_dos"
@@ -107,7 +127,7 @@
         android:background="#FFF7F7"
         android:text="2"
         android:textColor="#000000"
-        android:textSize="100sp"
+        android:textSize="70sp"
         android:layout_below="@id/btn_cinco"
         android:layout_toRightOf="@+id/btn_uno"
         />
@@ -119,7 +139,7 @@
         android:background="#FFF7F7"
         android:text="3"
         android:textColor="#000000"
-        android:textSize="100sp"
+        android:textSize="70sp"
         android:layout_below="@id/btn_seis"
         android:layout_toRightOf="@+id/btn_dos"
         />
@@ -131,8 +151,10 @@
             android:background="#FFF7F7"
             android:text="0"
             android:textColor="#000000"
-            android:textSize="100sp"
+            android:textSize="70sp"
             android:layout_below="@id/btn_uno"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="3dp"
             />
 
         <Button
@@ -142,7 +164,7 @@
             android:background="#FFF7F7"
             android:text="."
             android:textColor="#000000"
-            android:textSize="100sp"
+            android:textSize="70sp"
             android:layout_below="@id/btn_dos"
             android:layout_toRightOf="@+id/btn_cero"
             />
@@ -152,7 +174,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="="
-            android:textSize="100sp"
+            android:textSize="70sp"
             android:textColor="#FFFFFF"
             android:background="#D15013"
             android:layout_below="@id/btn_tres"
@@ -163,10 +185,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="+"
-        android:textSize="100sp"
+        android:textSize="70sp"
         android:textColor="#FFFFFF"
         android:background="#000"
-        android:layout_below="@id/text_view"
+        android:layout_below="@id/clear"
         android:layout_toRightOf="@+id/btn_nueve"
         />
 
@@ -175,7 +197,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="-"
-        android:textSize="100sp"
+        android:textSize="70sp"
         android:textColor="#FFFFFF"
         android:background="#000"
         android:layout_below="@id/btn_mas"
@@ -187,7 +209,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="*"
-        android:textSize="100sp"
+        android:textSize="70sp"
         android:textColor="#FFFFFF"
         android:background="#000"
         android:layout_below="@id/btn_menos"
@@ -199,7 +221,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="/"
-        android:textSize="100sp"
+        android:textSize="70sp"
         android:textColor="#FFFFFF"
         android:background="#000"
         android:layout_below="@id/btn_por"
