@@ -16,6 +16,9 @@ public class MainActivity extends AppCompatActivity {
     private Button cero, uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, igual, mas, menos, por, dividir,clear,punto;
     private TextView textView;
 
+    private float valor1 , valor2;
+    private boolean suma, resta, multiplicacion, division;
+
     //@BindView(R.id.btn_cero) Button cero;
 
     @Override
@@ -152,6 +155,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 textView.setText(textView.getText()+".");
+            }
+        });
+
+        igual.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                valor2 = Float.parseFloat(textView.getText()+"");
+
+                if (suma == true){
+                    textView.setText((int) (valor1 + valor2));
+
+
+
+                }
+
+
             }
         });
 
