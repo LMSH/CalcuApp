@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private Button cero, uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, igual, mas, menos, por, dividir,clear,punto;
     private TextView textView;
 
-    private float valor1 , valor2;
+    private double valor1 , valor2;
     private boolean suma, resta, multiplicacion, division;
 
     //@BindView(R.id.btn_cero) Button cero;
@@ -27,36 +27,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //ButterKnife.bind(this);
 
-        textView = findViewById(R.id.text_view);
-        clear = findViewById(R.id.clear);
-        cero = findViewById(R.id.btn_cero);
-        uno = findViewById(R.id.btn_uno);
-        dos = findViewById(R.id.btn_dos);
-        tres = findViewById(R.id.btn_tres);
-        cuatro = findViewById(R.id.btn_cuatro);
-        cinco = findViewById(R.id.btn_cinco);
-        seis = findViewById(R.id.btn_seis);
-        siete = findViewById(R.id.btn_siete);
-        ocho = findViewById(R.id.btn_ocho);
-        nueve = findViewById(R.id.btn_nueve);
-        igual = findViewById(R.id.btn_igual);
-        mas = findViewById(R.id.btn_mas);
-        menos = findViewById(R.id.btn_menos);
-        por = findViewById(R.id.btn_por);
-        dividir = findViewById(R.id.btn_dividir);
-        punto = findViewById(R.id.btn_punto);
+        setUIViews();
+
 
         clear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                textView.setText(" ");
+                textView.setText(null);
             }
         });
 
         cero.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                textView.setText(textView.getText()+"0");
+                textView.setText(textView.getText().toString()+"0");
             }
         });
 
@@ -126,7 +110,15 @@ public class MainActivity extends AppCompatActivity {
         mas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                textView.setText(textView.getText()+"+");
+                if (textView != null){
+
+                    valor1 = Double.parseDouble(textView.getText() + "");
+                    suma = true;
+                    textView.setText(null);
+                } else {
+                    textView.setText("+");
+
+                }
             }
         });
 
@@ -158,13 +150,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
         igual.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 valor2 = Float.parseFloat(textView.getText()+"");
 
                 if (suma == true){
-                    textView.setText((int) (valor1 + valor2));
+                    textView.setText(valor1 + valor2 + "");
+                    suma = false;
 
 
 
@@ -174,8 +169,27 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
 
-
+    private void setUIViews() {
+            textView = findViewById(R.id.text_view);
+            clear = findViewById(R.id.clear);
+            cero = findViewById(R.id.btn_cero);
+            uno = findViewById(R.id.btn_uno);
+            dos = findViewById(R.id.btn_dos);
+            tres = findViewById(R.id.btn_tres);
+            cuatro = findViewById(R.id.btn_cuatro);
+            cinco = findViewById(R.id.btn_cinco);
+            seis = findViewById(R.id.btn_seis);
+            siete = findViewById(R.id.btn_siete);
+            ocho = findViewById(R.id.btn_ocho);
+            nueve = findViewById(R.id.btn_nueve);
+            igual = findViewById(R.id.btn_igual);
+            mas = findViewById(R.id.btn_mas);
+            menos = findViewById(R.id.btn_menos);
+            por = findViewById(R.id.btn_por);
+            dividir = findViewById(R.id.btn_dividir);
+            punto = findViewById(R.id.btn_punto);
     }
 
 }
