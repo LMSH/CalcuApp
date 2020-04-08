@@ -14,7 +14,7 @@ import butterknife.ButterKnife;
 public class MainActivity extends AppCompatActivity {
 
     private Button cero, uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, igual, mas, menos, por, dividir,clear,punto;
-    private TextView textView;
+    private TextView textView, textview2;
 
     private double valor1 , valor2;
     private boolean suma, resta, multiplicacion, division;
@@ -40,94 +40,111 @@ public class MainActivity extends AppCompatActivity {
         cero.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                textView.setText(textView.getText().toString()+"0");
+                textview2.setText(textview2.getText().toString()+"0");
             }
         });
 
         uno.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                textView.setText(textView.getText()+"1");
+                textview2.setText(textview2.getText()+"1");
             }
         });
 
         dos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                textView.setText(textView.getText()+"2");
+                textview2.setText(textview2.getText()+"2");
             }
         });
 
         tres.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                textView.setText(textView.getText()+"3");
+                textview2.setText(textview2.getText()+"3");
             }
         });
 
         cuatro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                textView.setText(textView.getText()+"4");
+                textview2.setText(textview2.getText()+"4");
             }
         });
 
         cinco.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                textView.setText(textView.getText()+"5");
+                textview2.setText(textview2.getText()+"5");
             }
         });
 
         seis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                textView.setText(textView.getText()+"6");
+                textview2.setText(textview2.getText()+"6");
             }
         });
 
         siete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                textView.setText(textView.getText()+"7");
+                textview2.setText(textview2.getText()+"7");
             }
         });
 
         ocho.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                textView.setText(textView.getText()+"8");
+                textview2.setText(textview2.getText()+"8");
             }
         });
 
         nueve.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                textView.setText(textView.getText()+"9");
+                textview2.setText(textview2.getText()+"9");
             }
         });
 
         mas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (textView != null){
 
-                    valor1 = Double.parseDouble(textView.getText() + "");
-                    suma = true;
-                    textView.setText(null);
-                } else {
-                    textView.setText("+");
+                textview2.setText(textView.getText()+"+");
 
-                }
+
             }
         });
 
-        menos.setOnClickListener(new View.OnClickListener() {
+//        mas.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                if (textview2 != null){
+//
+//                    valor1 = Float.parseFloat(textview2.getText() + "");
+//                    suma = true;
+//                    textView.setText(null);
+//                } else {
+//                    textView.setText("+");
+//
+//                }
+//            }
+//        });
+
+        mas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                textView.setText(textView.getText()+"-");
+
+                    valor1 = Float.parseFloat(textview2.getText() + "");
+                    suma = true;
+                    textView.setText(null);
+
             }
         });
+
+
 
         por.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -173,6 +190,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setUIViews() {
             textView = findViewById(R.id.text_view);
+            textview2 = findViewById(R.id.text_view2);
             clear = findViewById(R.id.clear);
             cero = findViewById(R.id.btn_cero);
             uno = findViewById(R.id.btn_uno);

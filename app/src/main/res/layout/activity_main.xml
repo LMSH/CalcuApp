@@ -17,7 +17,7 @@
         android:layout_marginRight="33dp"
         android:layout_marginLeft="26dp"
         android:scrollHorizontally="true"
-        android:text="2+2+2"
+        android:text=""
         android:textAlignment="textEnd"
         android:textColor="#1A1919"
         android:textSize="40sp" />
