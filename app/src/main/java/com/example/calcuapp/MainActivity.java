@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -127,20 +128,28 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                String signoMas = "+";
+
                 if (textview2 == null) {
-                    textview2.setText("");
+                    textview2.setText("0");
 
                 } else {
                     valor1 = Float.parseFloat(textview2.getText() + "");
                     suma = true;
                     textview2.setText(null);
                 }
+
+                textView.setText(signoMas);
+
             }
         });
 
         por.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                String signoMultiplicaciin = "*";
+
                 if (textview2 == null) {
                     textview2.setText("");
 
@@ -149,12 +158,16 @@ public class MainActivity extends AppCompatActivity {
                     multiplicacion = true;
                     textview2.setText(null);
                 }
+                textView.setText(signoMultiplicaciin);
             }
         });
 
         dividir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                String signoMDivision = "/";
+
                 if (textview2 == null) {
                     textview2.setText("");
 
@@ -163,12 +176,17 @@ public class MainActivity extends AppCompatActivity {
                     division = true;
                     textview2.setText(null);
                 }
+                textView.setText(signoMDivision);
+
             }
         });
 
         menos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                String signoMenos = "-";
+
                 if (textview2 == null) {
                     textview2.setText("");
 
@@ -177,6 +195,8 @@ public class MainActivity extends AppCompatActivity {
                     resta = true;
                     textview2.setText(null);
                 }
+
+                textView.setText(signoMenos);
             }
         });
 
@@ -188,6 +208,7 @@ public class MainActivity extends AppCompatActivity {
                 if (suma == true) {
                     textView.setText(valor1 + valor2 + "");
                     suma = false;
+
                 }
                 if (multiplicacion == true) {
                     textView.setText(valor1 * valor2 + "");
@@ -204,7 +225,7 @@ public class MainActivity extends AppCompatActivity {
                     resta = false;
                 }
 
-
+                textview2.setText("");
             }
 
         });
