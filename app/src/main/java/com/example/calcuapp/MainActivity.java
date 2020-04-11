@@ -190,7 +190,7 @@ public class MainActivity extends AppCompatActivity {
                     suma = false;
                 }
                 if (multiplicacion == true) {
-                    textView.setText(valor1 + valor2 + "");
+                    textView.setText(valor1 * valor2 + "");
                     multiplicacion = false;
                 }
 
