@@ -206,6 +206,8 @@ public class MainActivity extends AppCompatActivity {
                 valor2 = Float.parseFloat(textview2.getText() + "");
 
                 if (suma == true) {
+
+
                     textView.setText(valor1 + valor2 + "");
                     suma = false;
 
