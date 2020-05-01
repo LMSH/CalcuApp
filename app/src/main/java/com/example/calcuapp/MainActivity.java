@@ -41,7 +41,8 @@ public class MainActivity extends AppCompatActivity {
         cero.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                textview2.setText(textview2.getText().toString() + "0");
+                textview2.setText(textview2.getText() + "0");
+                textView.setText(null);
             }
         });
 
@@ -49,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 textview2.setText(textview2.getText() + "1");
+                textView.setText(null);
             }
         });
 
@@ -56,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 textview2.setText(textview2.getText() + "2");
+                textView.setText(null);
             }
         });
 
@@ -63,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 textview2.setText(textview2.getText() + "3");
+                textView.setText(null);
             }
         });
 
@@ -70,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 textview2.setText(textview2.getText() + "4");
+                textView.setText(null);
             }
         });
 
@@ -77,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 textview2.setText(textview2.getText() + "5");
+                textView.setText(null);
             }
         });
 
@@ -84,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 textview2.setText(textview2.getText() + "6");
+                textView.setText(null);
             }
         });
 
@@ -91,6 +98,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 textview2.setText(textview2.getText() + "7");
+                textView.setText(null);
+
             }
         });
 
@@ -98,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 textview2.setText(textview2.getText() + "8");
+                textView.setText(null);
             }
         });
 
@@ -105,6 +115,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 textview2.setText(textview2.getText() + "9");
+                textView.setText(null);
             }
         });
 
@@ -128,18 +139,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String signoMas = "+";
+             if(textview2.getText().length() != 0){
+                 valor1 = Float.parseFloat(textview2.getText().toString()+"");
+                 suma = true;
 
-                if (textview2 == null) {
-                    textview2.setText("0");
+                 textView.setText("+");
+                 textview2.setText(null);
+             }
 
-                } else {
-                    valor1 = Float.parseFloat(textview2.getText() + "");
+                if(textView == null){
+                    valor1 = Float.parseFloat(textView.getText() + "");
                     suma = true;
+
+                    textView.setText("+");
                     textview2.setText(null);
                 }
 
-                textView.setText(signoMas);
 
             }
         });
@@ -203,11 +218,9 @@ public class MainActivity extends AppCompatActivity {
         igual.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                valor2 = Float.parseFloat(textview2.getText() + "");
+                valor2 = Float.parseFloat(textview2.getText()+"");
 
                 if (suma == true) {
-
-
                     textView.setText(valor1 + valor2 + "");
                     suma = false;
 
