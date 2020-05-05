@@ -8,13 +8,16 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.spark.submitbutton.SubmitButton;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button cero, uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, igual, mas, menos, por, dividir, clear, punto;
+    private Button cero, uno, dos, tres, cuatro, cinco, seis,  ocho, nueve, igual, mas, menos, por, dividir, clear, punto,siete;
     private TextView textView, textview2;
 
     private double valor1, valor2;
@@ -147,13 +150,6 @@ public class MainActivity extends AppCompatActivity {
                  textview2.setText(null);
              }
 
-                if(textView == null){
-                    valor1 = Float.parseFloat(textView.getText() + "");
-                    suma = true;
-
-                    textView.setText("+");
-                    textview2.setText(null);
-                }
 
 
             }
@@ -184,10 +180,10 @@ public class MainActivity extends AppCompatActivity {
                 String signoMDivision = "/";
 
                 if (textview2 == null) {
-                    textview2.setText("");
+                    textview2.setText(signoMDivision);
 
                 } else {
-                    valor1 = Float.parseFloat(textview2.getText() + "");
+                    valor1 = Float.parseFloat(textview2.getText() + "/");
                     division = true;
                     textview2.setText(null);
                 }
@@ -219,10 +215,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 valor2 = Float.parseFloat(textview2.getText()+"");
+                String result;
 
                 if (suma == true) {
+                    //textView.setText(valor1 + valor2 + "");
                     textView.setText(valor1 + valor2 + "");
                     suma = false;
+                    result = textView.getText().toString();
+                    Toast.makeText(MainActivity.this, result, Toast.LENGTH_SHORT).show();
+
 
                 }
                 if (multiplicacion == true) {
@@ -240,7 +241,8 @@ public class MainActivity extends AppCompatActivity {
                     resta = false;
                 }
 
-                textview2.setText("");
+                textview2.setText(null);
+
             }
 
         });
